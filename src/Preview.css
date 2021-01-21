@@ -1,0 +1,10 @@
+.preview {
+  position: relative;
+}
+.preview__close {
+  position: absolute;
+  color: aliceblue;
+  margin: 5px;
+  top: 0;
+  cursor: pointer;
+}
