@@ -1,0 +1,38 @@
+.chats {
+  position: relative;
+  height: 400px;
+  width: 250px;
+}
+.chats__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #059ee0;
+  height: 50px;
+}
+.chats__search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 8px;
+}
+.chats__search > input {
+  background: transparent;
+  border: none;
+  flex: 1;
+  font-size: 12px;
+  color: white;
+  outline: none;
+}
+
+.chats__search > input::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.chats__avatar {
+  height: 25px !important;
+  width: 25px !important;
+}
