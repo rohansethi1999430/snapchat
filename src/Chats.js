@@ -44,6 +44,7 @@ function Chats() {
                         read={read}
                         timestamp={timestamp}
                         profilePic={profilePic}
+                        imageUrl={imageUrl}
                     />
                 ))}
             </div>
