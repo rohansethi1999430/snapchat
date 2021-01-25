@@ -14,13 +14,13 @@ function Chat({id,username,profilePic,timestamp,read,imageUrl}) {
     const open=()=>{
         if(!read){
             dispatch(selectImage(imageUrl));
-            // db.collection("posts").doc(id).set(
-            //     {
-            //         read:true,
-            //     },
-            //     {merge:true}
-            // );
-            // history.push('/chats/view');
+            db.collection("posts").doc(id).set(
+                {
+                    read:true,
+                },
+                {merge:true}
+            );
+            history.push('/chats/view');
         }
 
     };

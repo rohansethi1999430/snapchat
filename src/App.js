@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Preview from './Preview';
 import Chats from './Chats'
+import ChatView from './ChatView';
 
 function App() {
   return (
@@ -18,11 +19,16 @@ function App() {
       <Router>
       <div className="app__body">
         
-      <Route exact path="/chats">
-          <Chats/>
-          </Route>
-        <Switch>
+      
 
+
+        <Switch>
+        <Route exact path="/chats/view">
+          <ChatView/>
+        </Route>
+        <Route exact path="/chats">
+          <Chats/>
+        </Route>
 
         <Route exact path="/preview">
           <Preview/>
