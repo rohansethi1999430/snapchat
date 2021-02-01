@@ -11,17 +11,22 @@ import {
 import Preview from './Preview';
 import Chats from './Chats'
 import ChatView from './ChatView';
+import { selectuser } from './features/appSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import Login from './Login';
 
 function App() {
+const user = useSelector(selectuser);
+const dispatch = useDispatch();
+
   return (
     <div className="app">
      
       <Router>
-      <div className="app__body">
-        
-      
-
-
+      {!user ?  (
+        <Login/>
+      ):(
+        <div className="app__body">
         <Switch>
         <Route exact path="/chats/view">
           <ChatView/>
@@ -39,6 +44,9 @@ function App() {
           </Route>
         </Switch>
       </div>
+      )}
+
+     
     </Router>
       
     </div>
