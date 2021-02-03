@@ -45,7 +45,29 @@
   margin-top: -9px;
   overflow: scroll;
 }
+.chats__takePicIcon {
+  position: absolute;
+  background-color: white;
+  border-radius: 200px;
+  color: gray;
+  cursor: pointer;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px !important;
+}
+.chats__takePicIcon :hover {
+  opacity: 0.8;
+}
 
 .chats__posts::-webkit-scrollbar {
   display: none;
+}
+.chats__searchIcon {
+  color: white;
+  font-size: 13px !important;
+}
+.chats__chatIcon {
+  font-size: 18px !important;
+  color: white;
 }
