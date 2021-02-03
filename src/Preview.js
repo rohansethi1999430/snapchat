@@ -17,6 +17,7 @@ import firebase from "firebase"
 import { storage } from './firebase'
 import { db } from './firebase'
 import "firebase/storage";
+import { selectuser } from './features/appSlice'
 
 
 
@@ -26,7 +27,7 @@ function Preview() {
     const cameraImage = useSelector(selectCameraImage)
     const history=useHistory()
     const dispatch = useDispatch()
-
+    const user=useSelector(selectuser)
 
     useEffect(() => {
         if(!cameraImage){
@@ -54,7 +55,7 @@ function Preview() {
                     imageUrl:url,
                     username:"Rohan",
                     read:false,
-                    //profilepic
+                    profilePic:user.profilePic,
                     timestamp:firebase.firestore.FieldValue.serverTimestamp(),
 
                 });

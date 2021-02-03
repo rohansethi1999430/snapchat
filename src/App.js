@@ -41,24 +41,31 @@ useEffect(() => {
       {!user ?  (
         <Login/>
       ):(
+        <>
+        <img className='app__logo'
+        src="https://lakeridgenewsonline.com/wp-content/uploads/2020/04/snapchat.jpg" alt=""/>
         <div className="app__body">
-        <Switch>
-        <Route exact path="/chats/view">
-          <ChatView/>
-        </Route>
-        <Route exact path="/chats">
-          <Chats/>
-        </Route>
+          <div className="app__bodyBackground">
+          <Switch>
+          <Route exact path="/chats/view">
+            <ChatView/>
+          </Route>
+          <Route exact path="/chats">
+            <Chats/>
+          </Route>
 
-        <Route exact path="/preview">
-          <Preview/>
-          </Route>
-          
-          <Route exact path="/">
-          <WebcamCapture/>
-          </Route>
+          <Route exact path="/preview">
+            <Preview/>
+            </Route>
+            
+            <Route exact path="/">
+            <WebcamCapture/>
+            </Route>
         </Switch>
+          </div>
+        
       </div>
+      </>
       )}
 
      

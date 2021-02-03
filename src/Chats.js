@@ -10,6 +10,7 @@ import { selectuser } from './features/appSlice';
 import { auth } from './firebase';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import { useHistory } from 'react-router-dom';
+import { resetCameraImage } from './features/cameraSlice';
 
 
 function Chats() {
@@ -31,6 +32,7 @@ function Chats() {
         
     }, [])
     const takeSnap=()=>{
+        dispatch((resetCameraImage()))
         history.push('/')
     }
 
